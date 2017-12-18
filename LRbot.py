@@ -1,6 +1,6 @@
 import telepot
 
-TOKEN = "API KEY"
+TOKEN = "API TOKEN"
 bot = telepot.Bot(TOKEN)
 
 def on_chat_message(msg):
@@ -14,18 +14,14 @@ def on_chat_message(msg):
         firstName = msg['from']['first_name']
         lastName = msg['from']['last_name']
 
-        print('Message from: ' + firstName + " " + lastName )
-        print(msg)
-
         if 'Ciao Luca Rossi' in msgText:
                 bot.sendMessage(chat_id, ("Tara no!"))
-                
-        else if 'Come stai' in msgText:
+        elif 'Come stai' in msgText:
                 bot.sendMessage(chat_id, ("Oggi cominci male!"))
-        else if 'Sei pronto' in msgText:
-                bot.sendMessage(chat_id, ("Che ansia")
-        else 
-                bot.sendMessage(chat_id, ("mi fai venire l'ansia")
+        elif 'Sei pronto' in msgText:
+                bot.sendMessage(chat_id, ("Che ansia"))
+        else: 
+                bot.sendMessage(chat_id, ("mi fai venire l'ansia"))
 
 
 bot.message_loop({'chat': on_chat_message}, run_forever=True)
