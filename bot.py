@@ -24,8 +24,6 @@ def on_chat_message(msg):
         bot.sendMessage(chat_id, ("Oggi cominci male!"))
     elif 'Sei pronto' in msgText:
         bot.sendMessage(chat_id, ("Che ansia"))
-    else:
-        bot.sendMessage(chat_id, ("mi fai venire l'ansia"))
 
 
 bot.message_loop({'chat': on_chat_message}, run_forever=True)
