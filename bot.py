@@ -1,20 +1,31 @@
 # -*- coding: utf-8 -*-
-import redis
-import os
 import telebot
-# import some_api_lib
-# import ...
 
-# Example of your code beginning
-#           Config vars
+# Config vars
 token = os.environ['TELEGRAM_TOKEN']
-some_api_token = os.environ['SOME_API_TOKEN']
-#             ...
 
-# If you use redis, install this add-on https://elements.heroku.com/addons/heroku-redis
-r = redis.from_url(os.environ.get("REDIS_URL"))
+bot = telepot.Bot(token)
 
-#       Your bot code below
-# bot = telebot.TeleBot(token)
-# some_api = some_api_lib.connect(some_api_token)
-#              ...
+
+def on_chat_message(msg):
+    chat_id = msg['chat']['id']  # prelevo id del mittente
+    msgText = msg['text']  # prelevo testo del messaggio
+    # username = msg['chat']['username'] #prelevo username del mittente
+
+    # Log su shell
+    print('Command Received ' + msgText)
+
+    firstName = msg['from']['first_name']
+    lastName = msg['from']['last_name']
+
+    if 'Ciao Luca Rossi' in msgText:
+        bot.sendMessage(chat_id, ("Tara no!"))
+    elif 'Come stai' in msgText:
+        bot.sendMessage(chat_id, ("Oggi cominci male!"))
+    elif 'Sei pronto' in msgText:
+        bot.sendMessage(chat_id, ("Che ansia"))
+    else:
+        bot.sendMessage(chat_id, ("mi fai venire l'ansia"))
+
+
+bot.message_loop({'chat': on_chat_message}, run_forever=True)
