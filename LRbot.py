@@ -1,6 +1,6 @@
 import telepot
 
-TOKEN = "API TOKEN"
+TOKEN = "495345530:AAF81iyu3_vBMGWOjEQ93EMlrJMCe6_mOq8"
 bot = telepot.Bot(TOKEN)
 
 def on_chat_message(msg):
