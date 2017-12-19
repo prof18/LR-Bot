@@ -6,7 +6,6 @@ token = os.environ['TELEGRAM_TOKEN']
 
 bot = telepot.Bot(token)
 
-
 def on_chat_message(msg):
     chat_id = msg['chat']['id']  # prelevo id del mittente
     msgText = msg['text']  # prelevo testo del messaggio
@@ -17,12 +16,13 @@ def on_chat_message(msg):
 
     firstName = msg['from']['first_name']
     lastName = msg['from']['last_name']
+    msgText = msgText.lower()
 
-    if 'Ciao Luca Rossi' in msgText:
+    if 'ciao luca rossi' in msgText:
         bot.sendMessage(chat_id, ("Tara no!"))
-    elif 'Come stai' in msgText:
+    elif 'come stai' in msgText:
         bot.sendMessage(chat_id, ("Oggi cominci male!"))
-    elif 'Sei pronto' in msgText:
+    elif 'sei pronto' in msgText:
         bot.sendMessage(chat_id, ("Che ansia"))
 
 
