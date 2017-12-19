@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-import telebot
+import telepot
 
 # Config vars
 token = os.environ['TELEGRAM_TOKEN']
