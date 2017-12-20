@@ -5,7 +5,7 @@ import telepot, os
 token = os.environ['TELEGRAM_TOKEN']
 
 #material
-gifBestemmia = 'https://raw.githubusercontent.com/prof18/RSS-Parser/master/Screen.png'
+gifBestemmia = 'https://media.giphy.com/media/xUNd9RF49KWkiY3rhe/giphy.gif'
 godImage = 'https://drive.google.com/open?id=1BdbMGEtJEF4g9v1DW3TlEzhPAhIyquOY'
 siVocal = "https://drive.google.com/open?id=1UGuBto7q97m8qUWOiCH2bQYOoMrBlKgM"
 
