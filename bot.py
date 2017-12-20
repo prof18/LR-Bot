@@ -6,9 +6,8 @@ import os
 token = os.environ['TELEGRAM_TOKEN']
 
 # material
-gifBestemmia = 'https://media.giphy.com/media/xUNd9RF49KWkiY3rhe/giphy.gif'
-godImage = 'https://imgur.com/a/sDV6p'
-siVocal = "https://drive.google.com/open?id=1UGuBto7q97m8qUWOiCH2bQYOoMrBlKgM"
+gifBestemmia = os.environ['GIF_BEST']
+godImage = os.environ['GOD_IMAGE']
 
 bot = telepot.Bot(token)
 
