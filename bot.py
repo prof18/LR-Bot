@@ -27,9 +27,8 @@ def on_chat_message(msg):
         bot.sendMessage(chat_id, ("Tara no!"))
     elif 'come stai' in msgText:
         bot.sendMessage(chat_id, ("Oggi cominci male!"))
-    elif 'sei pronto' in msgText:
-        bot.sendMessage(chat_id, ("Che ansia"))
-    elif 'si' in msgText:
+    elif 'sei pronto' in msgText:        bot.sendMessage(chat_id, ("Che ansia"))
+    elif 'lr' in msgText:
         bot.sendDocument(chat_id, gifBestemmia)
 
 
