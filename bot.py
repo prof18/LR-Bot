@@ -5,7 +5,7 @@ import telepot, os
 token = os.environ['TELEGRAM_TOKEN']
 
 #material
-gifBestemmia = 'https://drive.google.com/open?id=1cpwqUpkvAmpPafZSDsr4QZsdFjXdxbSL'
+gifBestemmia = 'https://raw.githubusercontent.com/prof18/RSS-Parser/master/Screen.png'
 godImage = 'https://drive.google.com/open?id=1BdbMGEtJEF4g9v1DW3TlEzhPAhIyquOY'
 siVocal = "https://drive.google.com/open?id=1UGuBto7q97m8qUWOiCH2bQYOoMrBlKgM"
 
@@ -30,7 +30,7 @@ def on_chat_message(msg):
     elif 'sei pronto' in msgText:
         bot.sendMessage(chat_id, ("Che ansia"))
     elif 'si' in msgText:
-        bot.sendDocument(chat_id, (gifBestemmia))
+        bot.sendDocument(chat_id, gifBestemmia)
 
 
 bot.message_loop({'chat': on_chat_message}, run_forever=True)
